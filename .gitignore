@@ -1,6 +1,11 @@
+venv/
 .venv/
 __pycache__/
 *.pyc
-.env
+.pytest_cache/
 logs/
-*.db
+.env
+.env.*
+!.env.example
+# 이번 과제의 가상 설정 파일만 사용자가 명시적으로 업로드 승인했습니다.
+!general/.env

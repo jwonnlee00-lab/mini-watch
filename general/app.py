@@ -1,15 +1,23 @@
+import os
+from pathlib import Path
+from dotenv import load_dotenv
 from flask import Flask
+from request_logging import register_request_logging
+from routes.posts import posts_bp
+from routes.api import api_bp
 
-app = Flask(__name__)
-app.json.ensure_ascii = False  # JSON 응답의 한글을 그대로 표시
 
-POSTS = {
-    1: {"id": 1, "title": "첫 번째 공지", "body": "일반 서비스를 준비합니다."},
-    2: {"id": 2, "title": "실습 안내", "body": "게시글 번호를 바꿔 보세요."},
-}
-@app.get('/posts/<int:post_id>')
-def get_post(post_id):
-    post = POSTS.get(post_id)
-    if post is None:
-        return {'error': 'POST_NOT_FOUND'}, 404
-    return post, 200
+def create_app():
+    load_dotenv(Path(__file__).with_name(".env"))
+    app = Flask(__name__)
+    app.json.ensure_ascii = False
+    app.register_blueprint(posts_bp)
+    app.register_blueprint(api_bp)
+    register_request_logging(app)
+    return app
+
+
+app = create_app()
+
+if __name__ == "__main__":
+    app.run(host="127.0.0.1", port=int(os.getenv("PORT", "5100")))
