@@ -1,13 +1,8 @@
-CREATE TABLE posts (
-    id INTEGER PRIMARY KEY,
-    title TEXT NOT NULL,
-    body TEXT NOT NULL
-);
+CREATE SEQUENCE IF NOT EXISTS posts_id_seq;
 
-INSERT INTO posts (id, title, body)
-VALUES (1, '첫 번째 공지', '새 프로젝트를 시작합니다.');
+ALTER TABLE posts ALTER COLUMN id SET DEFAULT nextval('posts_id_seq');
 
-INSERT INTO posts (id, title, body)
-VALUES (2, '실습 안내', '게시글 번호를 바꿔 보세요.');
-
-SELECT * FROM posts;
+SELECT setval('posts_id_seq', GREATEST(
+    (SELECT COALESCE(MAX(id), 0) FROM posts),
+    (SELECT last_value FROM posts_id_seq)
+));
