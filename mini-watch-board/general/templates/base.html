@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}정원의 기록장{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header><a class="brand" href="{{ url_for('posts.index') }}">정원의 기록장</a><span>작은 생각을 하나씩 기록하는 공간</span></header>
+  <main>{% block content %}{% endblock %}</main>
+  <footer>Flask · Jinja2 · PostgreSQL</footer>
+</body>
+</html>
