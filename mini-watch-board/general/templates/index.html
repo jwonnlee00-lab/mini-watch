@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="heading"><div><p class="eyebrow">MY BOARD</p><h1>게시글 목록</h1></div><a class="button" href="{{ url_for('posts.new') }}">새 글 작성</a></div>
+{% if posts %}
+<ul class="post-list">
+{% for post in posts %}
+<li><span class="number">{{ post.id }}</span><a href="{{ url_for('posts.detail', post_id=post.id) }}">{{ post.title }}</a></li>
+{% endfor %}
+</ul>
+{% else %}<p class="empty">등록된 게시글이 없습니다.</p>{% endif %}
+{% endblock %}
