@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block title %}{{ post.title }} · 정원의 기록장{% endblock %}
+{% block content %}
+<p class="eyebrow">게시글 {{ post.id }}</p>
+<h1>{{ post.title }}</h1>
+<article class="body">{{ post.body }}</article>
+<nav class="actions"><a class="button secondary" href="{{ url_for('posts.index') }}">목록으로</a><a class="button" href="{{ url_for('posts.edit', post_id=post.id) }}">수정하기</a><a class="button danger" href="{{ url_for('posts.delete', post_id=post.id) }}">삭제하기</a></nav>
+{% endblock %}
