@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% block content %}
+<p class="eyebrow">게시글 {{ post.id }}</p><h1>게시글 삭제</h1>
+<p><strong>{{ post.title }}</strong></p><p>이 게시글을 삭제하시겠습니까? 삭제하면 되돌릴 수 없습니다.</p>
+<form method="post"><div class="actions"><button class="danger" type="submit">삭제 확인</button><a class="button secondary" href="{{ url_for('posts.detail', post_id=post.id) }}">취소</a></div></form>
+{% endblock %}
