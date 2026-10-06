@@ -8,6 +8,8 @@
 <body>
     <h1>{{ post.title }}</h1>
     <p class="post-body">{{ post.body }}</p>
+    <p><a href="/board/{{ post.id }}/edit">수정하기</a></p>
+    <p><a href="/board/{{ post.id }}/delete">삭제하기</a></p>
     <p><a href="/">목록으로</a></p>
 </body>
 </html>

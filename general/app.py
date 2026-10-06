@@ -61,6 +61,52 @@ def new_post():
     return redirect(f"/board/{post['id']}", code=303)
 
 
+@app.route("/board/<int:post_id>/edit", methods=["GET", "POST"])
+def edit_post(post_id):
+    post = find_post(post_id)
+    if post is None:
+        return render_template("error.html", message="게시글을 찾을 수 없습니다."), 404
+    if request.method == "GET":
+        return render_template(
+            "edit.html", post_id=post_id,
+            title=post["title"], body=post["body"], error=None,
+        )
+
+    title = request.form.get("title", "").strip()
+    body = request.form.get("body", "").strip()
+    if not title or not body:
+        return render_template(
+            "edit.html", post_id=post_id, title=title, body=body,
+            error="제목과 내용을 모두 입력해 주세요.",
+        ), 400
+
+    with connect_db() as conn:
+        updated = conn.execute(
+            "UPDATE posts SET title = %s, body = %s WHERE id = %s RETURNING id",
+            (title, body, post_id),
+        ).fetchone()
+    if updated is None:
+        return render_template("error.html", message="게시글을 찾을 수 없습니다."), 404
+    return redirect(f"/board/{post_id}", code=303)
+
+
+@app.route("/board/<int:post_id>/delete", methods=["GET", "POST"])
+def delete_post(post_id):
+    if request.method == "GET":
+        post = find_post(post_id)
+        if post is None:
+            return render_template("error.html", message="게시글을 찾을 수 없습니다."), 404
+        return render_template("delete.html", post=post)
+
+    with connect_db() as conn:
+        deleted = conn.execute(
+            "DELETE FROM posts WHERE id = %s RETURNING id", (post_id,),
+        ).fetchone()
+    if deleted is None:
+        return render_template("error.html", message="게시글을 찾을 수 없습니다."), 404
+    return redirect("/", code=303)
+
+
 @app.post("/auth/login")
 def login():
     data = request.get_json(silent=True)
