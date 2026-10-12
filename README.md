@@ -13,8 +13,8 @@ Docker 적용 결과는 같은 저장소의 day07-start 브랜치에서 비교�
 
 ## 수업 순서와 Git 시작점
 
-1~5교시는 교안의 작은 코드를 직접 작성하고 같은 폴더의 compose.yaml 하나를 확장한다.
-Flask·Next.js·DB·게이트웨이의 요청과 응답을 확인한 뒤 6교시 프로젝트 적용을 시작한다.
+1~4교시는 교안의 작은 코드를 직접 작성하고 같은 폴더의 compose.yaml을 확장한다. 5교시에는 샘플을 앱·DB용 Compose 두 개로 나눈다.
+샘플의 전체 응답과 독립 실행을 확인한 뒤 6교시 종합 실습에서 일반·감시 Compose 두 개를 직접 완성한다.
 실프로젝트는 compose-general.yaml과 compose-monitor.yaml 두 파일을 각각 실행한다.
 두 API는 외부 네트워크 m5d1-events로 연결한다.
 
@@ -27,7 +27,7 @@ cd mini-watch-day06
 ```
 
 general·monitor는 기존 앱이며 day1-materials는 비교 코드와 적용할 설정이다.
-설정 적용·공유망 생성·각 프로젝트 실행 순서는 day1-materials/README.md와 6교시 교안을 따른다.
+6교시 시작틀은 day1-materials/project-starter다. 정답이 아닌 DB만 있는 Compose 두 개에서 출발한다. 요구사항·완료 기준·힌트·접힌 정답은 6교시 교안을 따른다.
 
 완성 비교 코드: https://github.com/zeroskill2400/mini-watch/tree/day07-start
 비교가 필요하면 기존 작업 폴더를 유지하고 별도 폴더로 받는다.
