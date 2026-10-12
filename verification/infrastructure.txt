@@ -1,0 +1,73 @@
+general config exit=0
+monitor config exit=0
+NAME                             IMAGE                      COMMAND                  SERVICE           CREATED          STATUS                    PORTS
+m5d1-general-general-api-1       m5d1-general-general-api   "python app.py"          general-api       26 seconds ago   Up 22 seconds             5000/tcp
+m5d1-general-general-db-1        postgres:16-bookworm       "docker-entrypoint.s…"   general-db        26 seconds ago   Up 25 seconds (healthy)   5432/tcp
+m5d1-general-general-gateway-1   nginx:1.28-alpine          "/docker-entrypoint.…"   general-gateway   25 seconds ago   Up 21 seconds             127.0.0.1:8081->80/tcp
+NAME                             IMAGE                      COMMAND                  SERVICE           CREATED              STATUS                    PORTS
+m5d1-monitor-monitor-api-1       m5d1-monitor-monitor-api   "python app.py"          monitor-api       57 seconds ago       Up 52 seconds             5000/tcp
+m5d1-monitor-monitor-db-1        postgres:16-bookworm       "docker-entrypoint.s…"   monitor-db        About a minute ago   Up 56 seconds (healthy)   5432/tcp
+m5d1-monitor-monitor-gateway-1   nginx:1.28-alpine          "/docker-entrypoint.…"   monitor-gateway   56 seconds ago       Up 51 seconds             127.0.0.1:8082->80/tcp
+m5d1-monitor-monitor-web-1       m5d1-monitor-monitor-web   "docker-entrypoint.s…"   monitor-web       56 seconds ago       Up 52 seconds             3000/tcp
+[
+    {
+        "Name": "m5d1-events",
+        "Id": "2c36e1ac192b6fd5bdfaeb8f1b8d971770f0ee5e560483de50f4a7be2ca13ae3",
+        "Created": "2026-10-12T06:36:50.600783299Z",
+        "Scope": "local",
+        "Driver": "bridge",
+        "EnableIPv4": true,
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": {},
+            "Config": [
+                {
+                    "Subnet": "172.21.0.0/16",
+                    "Gateway": "172.21.0.1"
+                }
+            ]
+        },
+        "Internal": false,
+        "Attachable": false,
+        "Ingress": false,
+        "ConfigFrom": {
+            "Network": ""
+        },
+        "ConfigOnly": false,
+        "Options": {
+            "com.docker.network.enable_ipv4": "true",
+            "com.docker.network.enable_ipv6": "false"
+        },
+        "Labels": {},
+        "Containers": {
+            "22449a3368f3cc59c7ff01fe7ed4ae85cb5c608654f97550c0ee0aaf9101641b": {
+                "Name": "m5d1-monitor-monitor-api-1",
+                "EndpointID": "3a72b5e7eedfd4197f5c928ed3511ace192f641938363d875fcf2ff0c0dede0f",
+                "MacAddress": "1a:c5:97:75:e5:9d",
+                "IPv4Address": "172.21.0.2/16",
+                "IPv6Address": ""
+            },
+            "db172dc78353277c5f1859f687466234386936059f97b51d2c10a6cfb2257ee2": {
+                "Name": "m5d1-general-general-api-1",
+                "EndpointID": "a0573ad2f5474fb8a1d18a5564e59a16129a3cc61f3a6d53489fafdabeef3f78",
+                "MacAddress": "66:4b:6c:7c:1c:cd",
+                "IPv4Address": "172.21.0.3/16",
+                "IPv6Address": ""
+            }
+        },
+        "Status": {
+            "IPAM": {
+                "Subnets": {
+                    "172.21.0.0/16": {
+                        "IPsInUse": 5,
+                        "DynamicIPsAvailable": 65531
+                    }
+                }
+            }
+        }
+    }
+]
+172.21.0.2      monitor-api
+/m5d1-general-general-db-1 health=healthy networks={"m5d1-general_general-data-net":{"IPAMConfig":null,"Links":null,"Aliases":["m5d1-general-general-db-1","general-db"],"DriverOpts":null,"GwPriority":0,"NetworkID":"a142c07563b69426d7e95f62989e259f81988ddb4c9cd6a8f8e44edf3dd0996d","EndpointID":"d974704a73e20cc5fb39a21ba2b89bc362d5b17e8e4c8bc66135673ab0227794","Gateway":"","IPAddress":"172.24.0.2","MacAddress":"96:64:c3:3b:fa:5f","IPPrefixLen":16,"IPv6Gateway":"","GlobalIPv6Address":"","GlobalIPv6PrefixLen":0,"DNSNames":["m5d1-general-general-db-1","general-db","b06b710ecc13"]}} mounts=[{"Type":"bind","Source":"C:\\work\\mini-watch-day06\\general\\sql\\docker-init.sql","Destination":"/docker-entrypoint-initdb.d/01-init.sql","Mode":"ro","RW":false,"Propagation":"rprivate"},{"Type":"volume","Name":"m5d1-general_general-data","Source":"m5d1-general_general-data","Destination":"/var/lib/postgresql/data","Driver":"local","Mode":"rw","RW":true,"Propagation":""}]
+/m5d1-monitor-monitor-db-1 health=healthy networks={"m5d1-monitor_monitor-data-net":{"IPAMConfig":null,"Links":null,"Aliases":["m5d1-monitor-monitor-db-1","monitor-db"],"DriverOpts":null,"GwPriority":0,"NetworkID":"5c82118f0d92861e6be29c7640ceb20c47c41fb23eda04bd40658975ccd432a5","EndpointID":"7293ff2bcb59d2af3b29019d7e7e20d476f7c53325c1a51f11f2d02b42065675","Gateway":"","IPAddress":"172.23.0.2","MacAddress":"82:a7:5f:e3:e6:a8","IPPrefixLen":16,"IPv6Gateway":"","GlobalIPv6Address":"","GlobalIPv6PrefixLen":0,"DNSNames":["m5d1-monitor-monitor-db-1","monitor-db","4e42f2bb99a1"]}} mounts=[{"Type":"bind","Source":"C:\\work\\mini-watch-day06\\monitor\\backend\\sql\\docker-init.sql","Destination":"/docker-entrypoint-initdb.d/01-init.sql","Mode":"ro","RW":false,"Propagation":"rprivate"},{"Type":"volume","Name":"m5d1-monitor_monitor-data","Source":"m5d1-monitor_monitor-data","Destination":"/var/lib/postgresql/data","Driver":"local","Mode":"rw","RW":true,"Propagation":""}]

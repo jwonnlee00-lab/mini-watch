@@ -1,0 +1,155 @@
+ id |  event_type   | status_code 
+----+---------------+-------------
+  7 | login_failure |         401
+  8 | login_success |         200
+(2 rows)
+
+ id |    title    |             body              
+----+-------------+-------------------------------
+  1 | Docker 점검 | 로그인 실패와 성공을 확인했다
+(1 row)
+
+/m5d1-general-general-api-1 db172dc78353277c5f1859f687466234386936059f97b51d2c10a6cfb2257ee2
+/m5d1-monitor-monitor-api-1 22449a3368f3cc59c7ff01fe7ed4ae85cb5c608654f97550c0ee0aaf9101641b
+ Container m5d1-general-general-gateway-1 Stopping 
+ Container m5d1-general-general-gateway-1 Stopped 
+ Container m5d1-general-general-gateway-1 Removing 
+ Container m5d1-general-general-gateway-1 Removed 
+ Container m5d1-general-general-api-1 Stopping 
+ Container m5d1-general-general-api-1 Stopped 
+ Container m5d1-general-general-api-1 Removing 
+ Container m5d1-general-general-api-1 Removed 
+ Container m5d1-general-general-db-1 Stopping 
+ Container m5d1-general-general-db-1 Stopped 
+ Container m5d1-general-general-db-1 Removing 
+ Container m5d1-general-general-db-1 Removed 
+ Network m5d1-general_general-front-net Removing 
+ Network m5d1-general_general-data-net Removing 
+ Network m5d1-general_general-data-net Removed 
+ Network m5d1-general_general-front-net Removed 
+ Container m5d1-monitor-monitor-gateway-1 Stopping 
+ Container m5d1-monitor-monitor-gateway-1 Stopped 
+ Container m5d1-monitor-monitor-gateway-1 Removing 
+ Container m5d1-monitor-monitor-gateway-1 Removed 
+ Container m5d1-monitor-monitor-web-1 Stopping 
+ Container m5d1-monitor-monitor-web-1 Stopped 
+ Container m5d1-monitor-monitor-web-1 Removing 
+ Container m5d1-monitor-monitor-web-1 Removed 
+ Container m5d1-monitor-monitor-api-1 Stopping 
+ Container m5d1-monitor-monitor-api-1 Stopped 
+ Container m5d1-monitor-monitor-api-1 Removing 
+ Container m5d1-monitor-monitor-api-1 Removed 
+ Container m5d1-monitor-monitor-db-1 Stopping 
+ Container m5d1-monitor-monitor-db-1 Stopped 
+ Container m5d1-monitor-monitor-db-1 Removing 
+ Container m5d1-monitor-monitor-db-1 Removed 
+ Network m5d1-monitor_monitor-front-net Removing 
+ Network m5d1-monitor_monitor-data-net Removing 
+ Network m5d1-monitor_monitor-front-net Removed 
+ Network m5d1-monitor_monitor-data-net Removed 
+[
+    {
+        "CreatedAt": "2026-10-12T06:38:08Z",
+        "Driver": "local",
+        "Labels": {
+            "com.docker.compose.config-hash": "d34fe02b53dc264534391fbfa368e7c527b4f01d325462ca4c52a3b8fcb9243c",
+            "com.docker.compose.project": "m5d1-general",
+            "com.docker.compose.version": "5.5.1",
+            "com.docker.compose.volume": "general-data"
+        },
+        "Mountpoint": "/var/lib/docker/volumes/m5d1-general_general-data/_data",
+        "Name": "m5d1-general_general-data",
+        "Options": null,
+        "Scope": "local"
+    },
+    {
+        "CreatedAt": "2026-10-12T06:37:35Z",
+        "Driver": "local",
+        "Labels": {
+            "com.docker.compose.config-hash": "6c058619a976ab7427cbdc0730c81fd1052cae8ca32d5fb03f3440e997e90a50",
+            "com.docker.compose.project": "m5d1-monitor",
+            "com.docker.compose.version": "5.5.1",
+            "com.docker.compose.volume": "monitor-data"
+        },
+        "Mountpoint": "/var/lib/docker/volumes/m5d1-monitor_monitor-data/_data",
+        "Name": "m5d1-monitor_monitor-data",
+        "Options": null,
+        "Scope": "local"
+    }
+]
+ Network m5d1-monitor_monitor-data-net Creating 
+ Network m5d1-monitor_monitor-front-net Creating 
+ Network m5d1-monitor_monitor-data-net Creating 
+ Network m5d1-monitor_monitor-front-net Creating 
+ Network m5d1-monitor_monitor-data-net Created 
+ Network m5d1-monitor_monitor-data-net Created 
+ Container m5d1-monitor-monitor-db-1 Creating 
+ Network m5d1-monitor_monitor-front-net Created 
+ Network m5d1-monitor_monitor-front-net Created 
+ Container m5d1-monitor-monitor-db-1 Created 
+ Container m5d1-monitor-monitor-api-1 Creating 
+ Container m5d1-monitor-monitor-api-1 Created 
+ Container m5d1-monitor-monitor-web-1 Creating 
+ Container m5d1-monitor-monitor-web-1 Created 
+ Container m5d1-monitor-monitor-gateway-1 Creating 
+ Container m5d1-monitor-monitor-gateway-1 Created 
+ Container m5d1-monitor-monitor-db-1 Starting 
+ Container m5d1-monitor-monitor-db-1 Started 
+ Container m5d1-monitor-monitor-db-1 Waiting 
+ Container m5d1-monitor-monitor-db-1 Healthy 
+ Container m5d1-monitor-monitor-api-1 Starting 
+ Container m5d1-monitor-monitor-api-1 Started 
+ Container m5d1-monitor-monitor-web-1 Starting 
+ Container m5d1-monitor-monitor-web-1 Started 
+ Container m5d1-monitor-monitor-gateway-1 Starting 
+ Container m5d1-monitor-monitor-gateway-1 Started 
+ Container m5d1-monitor-monitor-api-1 Waiting 
+ Container m5d1-monitor-monitor-web-1 Waiting 
+ Container m5d1-monitor-monitor-gateway-1 Waiting 
+ Container m5d1-monitor-monitor-db-1 Waiting 
+ Container m5d1-monitor-monitor-db-1 Healthy 
+ Container m5d1-monitor-monitor-gateway-1 Healthy 
+ Container m5d1-monitor-monitor-web-1 Healthy 
+ Container m5d1-monitor-monitor-api-1 Healthy 
+monitor auth/me HTTP 200
+ Network m5d1-general_general-data-net Creating 
+ Network m5d1-general_general-data-net Creating 
+ Network m5d1-general_general-front-net Creating 
+ Network m5d1-general_general-front-net Creating 
+ Network m5d1-general_general-data-net Created 
+ Network m5d1-general_general-data-net Created 
+ Container m5d1-general-general-db-1 Creating 
+ Network m5d1-general_general-front-net Created 
+ Network m5d1-general_general-front-net Created 
+ Container m5d1-general-general-db-1 Created 
+ Container m5d1-general-general-api-1 Creating 
+ Container m5d1-general-general-api-1 Created 
+ Container m5d1-general-general-gateway-1 Creating 
+ Container m5d1-general-general-gateway-1 Created 
+ Container m5d1-general-general-db-1 Starting 
+ Container m5d1-general-general-db-1 Started 
+ Container m5d1-general-general-db-1 Waiting 
+ Container m5d1-general-general-db-1 Healthy 
+ Container m5d1-general-general-api-1 Starting 
+ Container m5d1-general-general-api-1 Started 
+ Container m5d1-general-general-gateway-1 Starting 
+ Container m5d1-general-general-gateway-1 Started 
+ Container m5d1-general-general-gateway-1 Waiting 
+ Container m5d1-general-general-db-1 Waiting 
+ Container m5d1-general-general-api-1 Waiting 
+ Container m5d1-general-general-api-1 Healthy 
+ Container m5d1-general-general-gateway-1 Healthy 
+ Container m5d1-general-general-db-1 Healthy 
+/m5d1-general-general-api-1 ee597218b109bafd3c6f6adf757ca80439feead2be447ba5e8467fe1cec67837
+/m5d1-monitor-monitor-api-1 70645ae5b3d085fabfbd9cb23703bcb5374ca3f995cb537f80ba57012b73dba2
+ id |  event_type   | status_code 
+----+---------------+-------------
+  7 | login_failure |         401
+  8 | login_success |         200
+(2 rows)
+
+ id |    title    |             body              
+----+-------------+-------------------------------
+  1 | Docker 점검 | 로그인 실패와 성공을 확인했다
+(1 row)
+

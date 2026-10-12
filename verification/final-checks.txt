@@ -1,0 +1,19 @@
+http://localhost:8081/ HTTP 200
+http://localhost:8081/api/auth/me HTTP 200
+http://localhost:8082/ HTTP 200
+http://localhost:8082/api/auth/me HTTP 200
+{'current_database': 'general_db', 'current_user': 'sample'}
+{'current_database': 'monitor_db', 'current_user': 'sample'}
+172.21.0.2      monitor-api
+NAME                             IMAGE                      COMMAND                  SERVICE           CREATED              STATUS                        PORTS
+m5d1-general-general-api-1       m5d1-general-general-api   "python app.py"          general-api       About a minute ago   Up About a minute             5000/tcp
+m5d1-general-general-db-1        postgres:16-bookworm       "docker-entrypoint.s…"   general-db        About a minute ago   Up About a minute (healthy)   5432/tcp
+m5d1-general-general-gateway-1   nginx:1.28-alpine          "/docker-entrypoint.…"   general-gateway   About a minute ago   Up About a minute             127.0.0.1:8081->80/tcp
+NAME                             IMAGE                      COMMAND                  SERVICE           CREATED              STATUS                        PORTS
+m5d1-monitor-monitor-api-1       m5d1-monitor-monitor-api   "python app.py"          monitor-api       About a minute ago   Up About a minute             5000/tcp
+m5d1-monitor-monitor-db-1        postgres:16-bookworm       "docker-entrypoint.s…"   monitor-db        About a minute ago   Up About a minute (healthy)   5432/tcp
+m5d1-monitor-monitor-gateway-1   nginx:1.28-alpine          "/docker-entrypoint.…"   monitor-gateway   About a minute ago   Up About a minute             127.0.0.1:8082->80/tcp
+m5d1-monitor-monitor-web-1       m5d1-monitor-monitor-web   "docker-entrypoint.s…"   monitor-web       About a minute ago   Up About a minute             3000/tcp
+production-build-present
+excluded-local-artifacts
+excluded-local-artifacts

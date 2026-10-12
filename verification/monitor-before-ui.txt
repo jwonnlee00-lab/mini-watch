@@ -1,0 +1,130 @@
+Browser tab: 2, Title: "미니프로젝트 감시 서비스", URL: "http://localhost:8082/".
+1 AXWebArea 미니프로젝트 감시 서비스, URL: localhost:8082/
+	2 container
+		3 heading 감시 서비스, Value: 1
+			4 text 감시 서비스
+		5 button 현재 로그인 확인
+		6 text 요청 기록을 불러왔습니다. operator  사용자
+		7 button 로그아웃
+		8 heading 요청 기록, Value: 2
+			9 text 요청 기록
+		10 button 기록 불러오기
+		11 table
+			12 row
+				13 cell
+					14 text 종류
+				15 cell
+					16 text 방법
+				17 cell
+					18 text 경로
+				19 cell
+					20 text 상태
+			24 row
+				25 cell
+					26 text http_request
+				27 cell
+					28 text GET
+				29 cell
+					30 text /static/style.css
+				31 cell
+					32 text 200
+			33 row
+				34 cell
+					35 text http_request
+				36 cell
+					37 text GET
+				38 cell
+					39 text /
+				40 cell
+					41 text 200
+			42 row
+				43 cell
+					44 text login_success
+				45 cell
+					46 text POST
+				47 cell
+					48 text /auth/login
+				49 cell
+					50 text 200
+			51 row
+				52 cell
+					53 text login_failure
+				54 cell
+					55 text POST
+				56 cell
+					57 text /auth/login
+				58 cell
+					59 text 401
+			60 row
+				61 cell
+					62 text http_request
+				63 cell
+					64 text GET
+				65 cell
+					66 text /static/style.css
+				67 cell
+					68 text 200
+			69 row
+				70 cell
+					71 text http_request
+				72 cell
+					73 text GET
+				74 cell
+					75 text /static/login.js
+				76 cell
+					77 text 200
+			78 row
+				79 cell
+					80 text http_request
+				81 cell
+					82 text GET
+				83 cell
+					84 text /login
+				85 cell
+					86 text 200
+			87 row
+				88 cell
+					89 text http_request
+				90 cell
+					91 text GET
+				92 cell
+					93 text /favicon.ico
+				94 cell
+					95 text 404
+			96 row
+				97 cell
+					98 text http_request
+				99 cell
+					100 text GET
+				101 cell
+					102 text /static/style.css
+				103 cell
+					104 text 200
+			105 row
+				106 cell
+					107 text http_request
+				108 cell
+					109 text GET
+				110 cell
+					111 text /
+				112 cell
+					113 text 200
+		21 heading 관찰 메모, Value: 2
+			22 text 관찰 메모
+		23 button 목록 불러오기
+		114 heading 새 메모, Value: 2
+			115 text 새 메모
+		116 container
+			117 text 제목
+			118 text field (settable) 제목
+			119 text 내용
+			120 text entry area (settable) 내용
+			121 button 등록
+		122 text 메모  1 개
+		123 heading Docker 점검, Value: 2
+			124 text Docker 점검
+		125 text 로그인 실패와 성공을 확인했다
+		126 button 수정
+		127 button 삭제
+
+The focused UI element is 1 AXWebArea 미니프로젝트 감시 서비스, URL: localhost:8082/

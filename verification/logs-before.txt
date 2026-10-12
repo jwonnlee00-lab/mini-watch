@@ -1,0 +1,285 @@
+general-api-1      |  * Serving Flask app 'app'
+general-api-1      |  * Debug mode: off
+general-api-1      | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+general-db-1       | The files belonging to this database system will be owned by user "postgres".
+general-gateway-1  | /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+general-db-1       | This user must also own the server process.
+general-api-1      |  * Running on all addresses (0.0.0.0)
+general-db-1       | 
+general-api-1      |  * Running on http://127.0.0.1:5000
+general-db-1       | The database cluster will be initialized with locale "en_US.utf8".
+general-db-1       | The default database encoding has accordingly been set to "UTF8".
+general-api-1      |  * Running on http://172.21.0.3:5000
+general-db-1       | The default text search configuration will be set to "english".
+general-db-1       | 
+general-api-1      | [33mPress CTRL+C to quit[0m
+general-db-1       | Data page checksums are disabled.
+general-api-1      | {"method": "GET", "path": "/", "status_code": 200}
+general-gateway-1  | /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+general-db-1       | 
+general-gateway-1  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+general-db-1       | fixing permissions on existing directory /var/lib/postgresql/data ... ok
+general-api-1      | 172.25.0.3 - - [12/Oct/2026 06:38:46] "GET / HTTP/1.0" 200 -
+general-db-1       | creating subdirectories ... ok
+general-gateway-1  | 10-listen-on-ipv6-by-default.sh: info: can not modify /etc/nginx/conf.d/default.conf (read-only file system?)
+general-db-1       | selecting dynamic shared memory implementation ... posix
+general-gateway-1  | /docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolvers.envsh
+general-gateway-1  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+general-gateway-1  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
+general-api-1      | {"method": "GET", "path": "/static/style.css", "status_code": 200}
+general-api-1      | 172.25.0.3 - - [12/Oct/2026 06:38:46] "GET /static/style.css HTTP/1.0" 200 -
+general-gateway-1  | /docker-entrypoint.sh: Configuration complete; ready for start up
+general-api-1      | {"method": "GET", "path": "/favicon.ico", "status_code": 404}
+general-gateway-1  | 2026/10/12 06:38:13 [notice] 1#1: using the "epoll" event method
+general-api-1      | 172.25.0.3 - - [12/Oct/2026 06:38:46] "[33mGET /favicon.ico HTTP/1.0[0m" 404 -
+general-gateway-1  | 2026/10/12 06:38:13 [notice] 1#1: nginx/1.28.3
+general-api-1      | {"method": "GET", "path": "/login", "status_code": 200}
+general-db-1       | selecting default max_connections ... 100
+general-db-1       | selecting default shared_buffers ... 128MB
+general-api-1      | 172.25.0.3 - - [12/Oct/2026 06:38:54] "GET /login HTTP/1.0" 200 -
+general-gateway-1  | 2026/10/12 06:38:13 [notice] 1#1: built by gcc 15.2.0 (Alpine 15.2.0) 
+general-gateway-1  | 2026/10/12 06:38:13 [notice] 1#1: OS: Linux 6.18.33.2-microsoft-standard-WSL2
+general-api-1      | {"method": "GET", "path": "/static/style.css", "status_code": 200}
+general-gateway-1  | 2026/10/12 06:38:13 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+general-api-1      | {"method": "GET", "path": "/static/login.js", "status_code": 200}
+general-gateway-1  | 2026/10/12 06:38:13 [notice] 1#1: start worker processes
+general-api-1      | 172.25.0.3 - - [12/Oct/2026 06:38:54] "GET /static/login.js HTTP/1.0" 200 -
+general-gateway-1  | 2026/10/12 06:38:13 [notice] 1#1: start worker process 21
+general-api-1      | 172.25.0.3 - - [12/Oct/2026 06:38:54] "GET /static/style.css HTTP/1.0" 200 -
+general-gateway-1  | 2026/10/12 06:38:13 [notice] 1#1: start worker process 22
+general-api-1      | {"method": "POST", "path": "/auth/login", "status_code": 401}
+general-gateway-1  | 2026/10/12 06:38:13 [notice] 1#1: start worker process 23
+general-db-1       | selecting default time zone ... Etc/UTC
+general-db-1       | creating configuration files ... ok
+general-api-1      | 172.25.0.3 - - [12/Oct/2026 06:39:02] "[31m[1mPOST /auth/login HTTP/1.0[0m" 401 -
+general-api-1      | {"method": "POST", "path": "/auth/login", "status_code": 200}
+general-api-1      | 172.25.0.3 - - [12/Oct/2026 06:39:13] "POST /auth/login HTTP/1.0" 200 -
+general-api-1      | {"method": "GET", "path": "/", "status_code": 200}
+general-gateway-1  | 2026/10/12 06:38:13 [notice] 1#1: start worker process 24
+general-api-1      | 172.25.0.3 - - [12/Oct/2026 06:39:13] "GET / HTTP/1.0" 200 -
+general-api-1      | {"method": "GET", "path": "/static/style.css", "status_code": 200}
+general-api-1      | 172.25.0.3 - - [12/Oct/2026 06:39:13] "GET /static/style.css HTTP/1.0" 200 -
+general-gateway-1  | 2026/10/12 06:38:13 [notice] 1#1: start worker process 25
+general-gateway-1  | 2026/10/12 06:38:13 [notice] 1#1: start worker process 26
+general-db-1       | running bootstrap script ... ok
+general-db-1       | performing post-bootstrap initialization ... ok
+general-db-1       | syncing data to disk ... ok
+general-db-1       | 
+general-db-1       | 
+general-db-1       | Success. You can now start the database server using:
+general-db-1       | 
+general-db-1       |     pg_ctl -D /var/lib/postgresql/data -l logfile start
+general-db-1       | 
+general-db-1       | initdb: warning: enabling "trust" authentication for local connections
+general-gateway-1  | 2026/10/12 06:38:13 [notice] 1#1: start worker process 27
+general-db-1       | initdb: hint: You can change this by editing pg_hba.conf or using the option -A, or --auth-local and --auth-host, the next time you run initdb.
+general-gateway-1  | 2026/10/12 06:38:13 [notice] 1#1: start worker process 28
+general-gateway-1  | 2026/10/12 06:38:13 [notice] 1#1: start worker process 29
+general-db-1       | waiting for server to start....2026-10-12 06:38:09.944 UTC [48] LOG:  starting PostgreSQL 16.15 (Debian 16.15-1.pgdg12+2) on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14+deb12u1) 12.2.0, 64-bit
+general-db-1       | 2026-10-12 06:38:09.947 UTC [48] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+general-db-1       | 2026-10-12 06:38:09.958 UTC [51] LOG:  database system was shut down at 2026-10-12 06:38:09 UTC
+general-db-1       | 2026-10-12 06:38:09.963 UTC [48] LOG:  database system is ready to accept connections
+general-gateway-1  | 2026/10/12 06:38:13 [notice] 1#1: start worker process 30
+general-db-1       |  done
+general-gateway-1  | 2026/10/12 06:38:13 [notice] 1#1: start worker process 31
+general-gateway-1  | 2026/10/12 06:38:13 [notice] 1#1: start worker process 32
+general-gateway-1  | 2026/10/12 06:38:13 [notice] 1#1: start worker process 33
+general-db-1       | server started
+general-db-1       | CREATE DATABASE
+general-db-1       | 
+general-db-1       | 
+general-db-1       | /usr/local/bin/docker-entrypoint.sh: running /docker-entrypoint-initdb.d/01-init.sql
+general-db-1       | CREATE TABLE
+general-db-1       | CREATE TABLE
+general-db-1       | CREATE SEQUENCE
+general-db-1       | ALTER TABLE
+general-gateway-1  | 2026/10/12 06:38:13 [notice] 1#1: start worker process 34
+general-gateway-1  | 2026/10/12 06:38:13 [notice] 1#1: start worker process 35
+general-gateway-1  | 2026/10/12 06:38:13 [notice] 1#1: start worker process 36
+general-gateway-1  | 172.25.0.1 - - [12/Oct/2026:06:38:46 +0000] "GET / HTTP/1.1" 200 476 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36" "-"
+general-db-1       |  setval 
+general-gateway-1  | 2026/10/12 06:38:46 [warn] 21#21: *1 upstream sent duplicate header line: "Date: Mon, 12 Oct 2026 06:38:46 GMT", previous value: "Date: Mon, 12 Oct 2026 06:38:46 GMT", ignored while reading response header from upstream, client: 172.25.0.1, server: , request: "GET /static/style.css HTTP/1.1", upstream: "http://172.25.0.2:5000/static/style.css", host: "localhost:8081", referrer: "http://localhost:8081/"
+general-gateway-1  | 172.25.0.1 - - [12/Oct/2026:06:38:46 +0000] "GET /static/style.css HTTP/1.1" 200 436 "http://localhost:8081/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36" "-"
+general-gateway-1  | 172.25.0.1 - - [12/Oct/2026:06:38:46 +0000] "GET /favicon.ico HTTP/1.1" 404 207 "http://localhost:8081/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36" "-"
+general-gateway-1  | 172.25.0.1 - - [12/Oct/2026:06:38:54 +0000] "GET /login HTTP/1.1" 200 1156 "http://localhost:8081/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36" "-"
+general-gateway-1  | 2026/10/12 06:38:54 [warn] 22#22: *7 upstream sent duplicate header line: "Date: Mon, 12 Oct 2026 06:38:54 GMT", previous value: "Date: Mon, 12 Oct 2026 06:38:54 GMT", ignored while reading response header from upstream, client: 172.25.0.1, server: , request: "GET /static/login.js HTTP/1.1", upstream: "http://172.25.0.2:5000/static/login.js", host: "localhost:8081", referrer: "http://localhost:8081/login"
+general-gateway-1  | 172.25.0.1 - - [12/Oct/2026:06:38:54 +0000] "GET /static/login.js HTTP/1.1" 200 1264 "http://localhost:8081/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36" "-"
+general-gateway-1  | 2026/10/12 06:38:54 [warn] 21#21: *1 upstream sent duplicate header line: "Date: Mon, 12 Oct 2026 06:38:54 GMT", previous value: "Date: Mon, 12 Oct 2026 06:38:54 GMT", ignored while reading response header from upstream, client: 172.25.0.1, server: , request: "GET /static/style.css HTTP/1.1", upstream: "http://172.25.0.2:5000/static/style.css", host: "localhost:8081", referrer: "http://localhost:8081/login"
+general-gateway-1  | 172.25.0.1 - - [12/Oct/2026:06:38:54 +0000] "GET /static/style.css HTTP/1.1" 200 436 "http://localhost:8081/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36" "-"
+general-gateway-1  | 172.25.0.1 - - [12/Oct/2026:06:39:02 +0000] "POST /auth/login HTTP/1.1" 401 72 "http://localhost:8081/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36" "-"
+general-gateway-1  | 172.25.0.1 - - [12/Oct/2026:06:39:13 +0000] "POST /auth/login HTTP/1.1" 200 98 "http://localhost:8081/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36" "-"
+general-db-1       | --------
+general-db-1       |       1
+general-db-1       | (1 row)
+general-db-1       | 
+general-gateway-1  | 172.25.0.1 - - [12/Oct/2026:06:39:13 +0000] "GET / HTTP/1.1" 200 689 "http://localhost:8081/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36" "-"
+general-gateway-1  | 2026/10/12 06:39:13 [warn] 21#21: *1 upstream sent duplicate header line: "Date: Mon, 12 Oct 2026 06:39:13 GMT", previous value: "Date: Mon, 12 Oct 2026 06:39:13 GMT", ignored while reading response header from upstream, client: 172.25.0.1, server: , request: "GET /static/style.css HTTP/1.1", upstream: "http://172.25.0.2:5000/static/style.css", host: "localhost:8081", referrer: "http://localhost:8081/"
+general-gateway-1  | 172.25.0.1 - - [12/Oct/2026:06:39:13 +0000] "GET /static/style.css HTTP/1.1" 200 436 "http://localhost:8081/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36" "-"
+general-db-1       | INSERT 0 1
+general-db-1       | 
+general-db-1       | 
+general-db-1       | waiting for server to shut down...2026-10-12 06:38:10.171 UTC [48] LOG:  received fast shutdown request
+general-db-1       | .2026-10-12 06:38:10.174 UTC [48] LOG:  aborting any active transactions
+general-db-1       | 2026-10-12 06:38:10.176 UTC [48] LOG:  background worker "logical replication launcher" (PID 54) exited with exit code 1
+general-db-1       | 2026-10-12 06:38:10.176 UTC [49] LOG:  shutting down
+general-db-1       | 2026-10-12 06:38:10.179 UTC [49] LOG:  checkpoint starting: shutdown immediate
+general-db-1       | 2026-10-12 06:38:10.263 UTC [49] LOG:  checkpoint complete: wrote 935 buffers (5.7%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.022 s, sync=0.053 s, total=0.087 s; sync files=312, longest=0.013 s, average=0.001 s; distance=4300 kB, estimate=4300 kB; lsn=0/191D430, redo lsn=0/191D430
+general-db-1       | 2026-10-12 06:38:10.266 UTC [48] LOG:  database system is shut down
+general-db-1       |  done
+general-db-1       | server stopped
+general-db-1       | 
+general-db-1       | PostgreSQL init process complete; ready for start up.
+general-db-1       | 
+general-db-1       | 2026-10-12 06:38:10.295 UTC [1] LOG:  starting PostgreSQL 16.15 (Debian 16.15-1.pgdg12+2) on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14+deb12u1) 12.2.0, 64-bit
+general-db-1       | 2026-10-12 06:38:10.295 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+general-db-1       | 2026-10-12 06:38:10.295 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+general-db-1       | 2026-10-12 06:38:10.302 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+general-db-1       | 2026-10-12 06:38:10.309 UTC [66] LOG:  database system was shut down at 2026-10-12 06:38:10 UTC
+general-db-1       | 2026-10-12 06:38:10.315 UTC [1] LOG:  database system is ready to accept connections
+monitor-web-1      | 
+monitor-gateway-1  | /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+monitor-gateway-1  | /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+monitor-gateway-1  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+monitor-gateway-1  | 10-listen-on-ipv6-by-default.sh: info: can not modify /etc/nginx/conf.d/default.conf (read-only file system?)
+monitor-db-1       | The files belonging to this database system will be owned by user "postgres".
+monitor-gateway-1  | /docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolvers.envsh
+monitor-db-1       | This user must also own the server process.
+monitor-db-1       | 
+monitor-api-1      |  * Serving Flask app 'app'
+monitor-web-1      | > next-frontend@0.1.0 start
+monitor-db-1       | The database cluster will be initialized with locale "en_US.utf8".
+monitor-gateway-1  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+monitor-db-1       | The default database encoding has accordingly been set to "UTF8".
+monitor-gateway-1  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
+monitor-db-1       | The default text search configuration will be set to "english".
+monitor-db-1       | 
+monitor-db-1       | Data page checksums are disabled.
+monitor-db-1       | 
+monitor-db-1       | fixing permissions on existing directory /var/lib/postgresql/data ... ok
+monitor-gateway-1  | /docker-entrypoint.sh: Configuration complete; ready for start up
+monitor-web-1      | > next start --hostname 0.0.0.0
+monitor-gateway-1  | 2026/10/12 06:37:43 [notice] 1#1: using the "epoll" event method
+monitor-db-1       | creating subdirectories ... ok
+monitor-web-1      | 
+monitor-web-1      | ▲ Next.js 16.4.0
+monitor-gateway-1  | 2026/10/12 06:37:43 [notice] 1#1: nginx/1.28.3
+monitor-web-1      | - Local:         http://localhost:3000
+monitor-gateway-1  | 2026/10/12 06:37:43 [notice] 1#1: built by gcc 15.2.0 (Alpine 15.2.0) 
+monitor-gateway-1  | 2026/10/12 06:37:43 [notice] 1#1: OS: Linux 6.18.33.2-microsoft-standard-WSL2
+monitor-gateway-1  | 2026/10/12 06:37:43 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+monitor-web-1      | - Network:       http://0.0.0.0:3000
+monitor-web-1      | ✓ Ready in 126ms
+monitor-web-1      | ✓ Running next.config.mjs took 15ms
+monitor-gateway-1  | 2026/10/12 06:37:43 [notice] 1#1: start worker processes
+monitor-gateway-1  | 2026/10/12 06:37:43 [notice] 1#1: start worker process 21
+monitor-gateway-1  | 2026/10/12 06:37:43 [notice] 1#1: start worker process 22
+monitor-gateway-1  | 2026/10/12 06:37:43 [notice] 1#1: start worker process 23
+monitor-db-1       | selecting dynamic shared memory implementation ... posix
+monitor-db-1       | selecting default max_connections ... 100
+monitor-db-1       | selecting default shared_buffers ... 128MB
+monitor-db-1       | selecting default time zone ... Etc/UTC
+monitor-gateway-1  | 2026/10/12 06:37:43 [notice] 1#1: start worker process 24
+monitor-db-1       | creating configuration files ... ok
+monitor-db-1       | running bootstrap script ... ok
+monitor-gateway-1  | 2026/10/12 06:37:43 [notice] 1#1: start worker process 25
+monitor-db-1       | performing post-bootstrap initialization ... ok
+monitor-api-1      |  * Debug mode: off
+monitor-api-1      | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+monitor-gateway-1  | 2026/10/12 06:37:43 [notice] 1#1: start worker process 26
+monitor-api-1      |  * Running on all addresses (0.0.0.0)
+monitor-gateway-1  | 2026/10/12 06:37:43 [notice] 1#1: start worker process 27
+monitor-gateway-1  | 2026/10/12 06:37:43 [notice] 1#1: start worker process 28
+monitor-gateway-1  | 2026/10/12 06:37:43 [notice] 1#1: start worker process 29
+monitor-db-1       | initdb: warning: enabling "trust" authentication for local connections
+monitor-gateway-1  | 2026/10/12 06:37:43 [notice] 1#1: start worker process 30
+monitor-db-1       | initdb: hint: You can change this by editing pg_hba.conf or using the option -A, or --auth-local and --auth-host, the next time you run initdb.
+monitor-gateway-1  | 2026/10/12 06:37:43 [notice] 1#1: start worker process 31
+monitor-db-1       | syncing data to disk ... ok
+monitor-gateway-1  | 2026/10/12 06:37:43 [notice] 1#1: start worker process 32
+monitor-db-1       | 
+monitor-gateway-1  | 2026/10/12 06:37:43 [notice] 1#1: start worker process 33
+monitor-db-1       | 
+monitor-gateway-1  | 2026/10/12 06:37:43 [notice] 1#1: start worker process 34
+monitor-db-1       | Success. You can now start the database server using:
+monitor-db-1       | 
+monitor-db-1       |     pg_ctl -D /var/lib/postgresql/data -l logfile start
+monitor-db-1       | 
+monitor-gateway-1  | 2026/10/12 06:37:43 [notice] 1#1: start worker process 35
+monitor-gateway-1  | 2026/10/12 06:37:43 [notice] 1#1: start worker process 36
+monitor-gateway-1  | 172.22.0.1 - - [12/Oct/2026:06:37:46 +0000] "GET / HTTP/1.1" 200 2087 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36" "-"
+monitor-api-1      |  * Running on http://127.0.0.1:5000
+monitor-gateway-1  | 172.22.0.1 - - [12/Oct/2026:06:38:01 +0000] "GET /api/auth/me HTTP/1.1" 200 73 "-" "Mozilla/5.0 (Windows NT 10.0; Microsoft Windows 10.0.26200; ko-KR) PowerShell/7.6.5" "-"
+monitor-api-1      |  * Running on http://172.21.0.2:5000
+monitor-api-1      | [33mPress CTRL+C to quit[0m
+monitor-api-1      | 172.22.0.4 - - [12/Oct/2026 06:38:01] "GET /api/auth/me HTTP/1.0" 200 -
+monitor-db-1       | waiting for server to start....2026-10-12 06:37:40.286 UTC [48] LOG:  starting PostgreSQL 16.15 (Debian 16.15-1.pgdg12+2) on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14+deb12u1) 12.2.0, 64-bit
+monitor-api-1      | 172.21.0.3 - - [12/Oct/2026 06:38:46] "[35m[1mPOST /api/events HTTP/1.1[0m" 201 -
+monitor-db-1       | 2026-10-12 06:37:40.289 UTC [48] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+monitor-api-1      | 172.21.0.3 - - [12/Oct/2026 06:38:46] "[35m[1mPOST /api/events HTTP/1.1[0m" 201 -
+monitor-db-1       | 2026-10-12 06:37:40.300 UTC [51] LOG:  database system was shut down at 2026-10-12 06:37:40 UTC
+monitor-gateway-1  | 172.22.0.1 - - [12/Oct/2026:06:38:17 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36" "-"
+monitor-api-1      | 172.21.0.3 - - [12/Oct/2026 06:38:46] "[35m[1mPOST /api/events HTTP/1.1[0m" 201 -
+monitor-api-1      | 172.21.0.3 - - [12/Oct/2026 06:38:54] "[35m[1mPOST /api/events HTTP/1.1[0m" 201 -
+monitor-db-1       | 2026-10-12 06:37:40.305 UTC [48] LOG:  database system is ready to accept connections
+monitor-db-1       |  done
+monitor-db-1       | server started
+monitor-db-1       | CREATE DATABASE
+monitor-db-1       | 
+monitor-gateway-1  | 172.22.0.1 - - [12/Oct/2026:06:38:17 +0000] "GET /_next/static/chunks/2g6o7buxm7u5i.css HTTP/1.1" 200 574 "http://localhost:8082/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36" "-"
+monitor-db-1       | 
+monitor-gateway-1  | 172.22.0.1 - - [12/Oct/2026:06:38:17 +0000] "GET /_next/static/chunks/3cfn99dbrcvvp.js HTTP/1.1" 200 5961 "http://localhost:8082/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36" "-"
+monitor-db-1       | /usr/local/bin/docker-entrypoint.sh: running /docker-entrypoint-initdb.d/01-init.sql
+monitor-gateway-1  | 172.22.0.1 - - [12/Oct/2026:06:38:17 +0000] "GET /_next/static/chunks/turbopack-3-ry682tkyiqk.js HTTP/1.1" 200 3958 "http://localhost:8082/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36" "-"
+monitor-db-1       | CREATE TABLE
+monitor-gateway-1  | 172.22.0.1 - - [12/Oct/2026:06:38:17 +0000] "GET /_next/static/chunks/0umf92h1sb77c.js HTTP/1.1" 200 3526 "http://localhost:8082/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36" "-"
+monitor-api-1      | 172.21.0.3 - - [12/Oct/2026 06:38:54] "[35m[1mPOST /api/events HTTP/1.1[0m" 201 -
+monitor-gateway-1  | 172.22.0.1 - - [12/Oct/2026:06:38:17 +0000] "GET /_next/static/chunks/35xu_8f5iw5n3.js HTTP/1.1" 200 1926 "http://localhost:8082/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36" "-"
+monitor-gateway-1  | 172.22.0.1 - - [12/Oct/2026:06:38:17 +0000] "GET /_next/static/chunks/3c4xol65z2da2.js HTTP/1.1" 200 49682 "http://localhost:8082/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36" "-"
+monitor-api-1      | 172.21.0.3 - - [12/Oct/2026 06:38:54] "[35m[1mPOST /api/events HTTP/1.1[0m" 201 -
+monitor-api-1      | 172.21.0.3 - - [12/Oct/2026 06:39:02] "[35m[1mPOST /api/events HTTP/1.1[0m" 201 -
+monitor-api-1      | 172.21.0.3 - - [12/Oct/2026 06:39:13] "[35m[1mPOST /api/events HTTP/1.1[0m" 201 -
+monitor-db-1       | CREATE TABLE
+monitor-db-1       | CREATE TABLE
+monitor-db-1       | 
+monitor-db-1       | 
+monitor-db-1       | waiting for server to shut down...2026-10-12 06:37:40.546 UTC [48] LOG:  received fast shutdown request
+monitor-db-1       | .2026-10-12 06:37:40.549 UTC [48] LOG:  aborting any active transactions
+monitor-db-1       | 2026-10-12 06:37:40.551 UTC [48] LOG:  background worker "logical replication launcher" (PID 54) exited with exit code 1
+monitor-api-1      | 172.21.0.3 - - [12/Oct/2026 06:39:13] "[35m[1mPOST /api/events HTTP/1.1[0m" 201 -
+monitor-db-1       | 2026-10-12 06:37:40.552 UTC [49] LOG:  shutting down
+monitor-gateway-1  | 172.22.0.1 - - [12/Oct/2026:06:38:17 +0000] "GET /_next/static/chunks/3dmm3v_fq28gc.js HTTP/1.1" 200 72077 "http://localhost:8082/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36" "-"
+monitor-gateway-1  | 172.22.0.1 - - [12/Oct/2026:06:38:17 +0000] "GET /favicon.ico?favicon.117ezoe8m31dk.ico HTTP/1.1" 200 15113 "http://localhost:8082/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36" "-"
+monitor-db-1       | 2026-10-12 06:37:40.555 UTC [49] LOG:  checkpoint starting: shutdown immediate
+monitor-gateway-1  | 172.22.0.1 - - [12/Oct/2026:06:39:14 +0000] "GET /api/auth/me HTTP/1.1" 200 73 "http://localhost:8082/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36" "-"
+monitor-gateway-1  | 172.22.0.1 - - [12/Oct/2026:06:39:14 +0000] "POST /api/auth/login HTTP/1.1" 200 99 "http://localhost:8082/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36" "-"
+monitor-api-1      | 172.21.0.3 - - [12/Oct/2026 06:39:13] "[35m[1mPOST /api/events HTTP/1.1[0m" 201 -
+monitor-gateway-1  | 172.22.0.1 - - [12/Oct/2026:06:39:20 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36" "-"
+monitor-gateway-1  | 172.22.0.1 - - [12/Oct/2026:06:39:24 +0000] "GET /api/events HTTP/1.1" 200 1417 "http://localhost:8082/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36" "-"
+monitor-gateway-1  | 172.22.0.1 - - [12/Oct/2026:06:39:24 +0000] "GET /api/notes HTTP/1.1" 200 13 "http://localhost:8082/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36" "-"
+monitor-api-1      | 172.22.0.4 - - [12/Oct/2026 06:39:14] "GET /api/auth/me HTTP/1.0" 200 -
+monitor-gateway-1  | 172.22.0.1 - - [12/Oct/2026:06:39:38 +0000] "POST /api/notes HTTP/1.1" 201 94 "http://localhost:8082/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36" "-"
+monitor-db-1       | 2026-10-12 06:37:40.701 UTC [49] LOG:  checkpoint complete: wrote 934 buffers (5.7%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.025 s, sync=0.114 s, total=0.150 s; sync files=317, longest=0.023 s, average=0.001 s; distance=4318 kB, estimate=4318 kB; lsn=0/1921C18, redo lsn=0/1921C18
+monitor-api-1      | 172.22.0.4 - - [12/Oct/2026 06:39:14] "POST /api/auth/login HTTP/1.0" 200 -
+monitor-gateway-1  | 172.22.0.1 - - [12/Oct/2026:06:39:38 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36" "-"
+monitor-api-1      | 172.22.0.4 - - [12/Oct/2026 06:39:24] "GET /api/events HTTP/1.0" 200 -
+monitor-gateway-1  | 172.22.0.1 - - [12/Oct/2026:06:39:38 +0000] "GET /favicon.ico?favicon.117ezoe8m31dk.ico HTTP/1.1" 200 15114 "http://localhost:8082/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36" "-"
+monitor-db-1       | 2026-10-12 06:37:40.704 UTC [48] LOG:  database system is shut down
+monitor-gateway-1  | 172.22.0.1 - - [12/Oct/2026:06:39:38 +0000] "GET /api/auth/me HTTP/1.1" 200 99 "http://localhost:8082/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36" "-"
+monitor-db-1       |  done
+monitor-db-1       | server stopped
+monitor-gateway-1  | 172.22.0.1 - - [12/Oct/2026:06:39:49 +0000] "GET /api/events HTTP/1.1" 200 1417 "http://localhost:8082/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36" "-"
+monitor-db-1       | 
+monitor-db-1       | PostgreSQL init process complete; ready for start up.
+monitor-db-1       | 
+monitor-api-1      | 172.22.0.4 - - [12/Oct/2026 06:39:24] "GET /api/notes HTTP/1.0" 200 -
+monitor-gateway-1  | 172.22.0.1 - - [12/Oct/2026:06:39:49 +0000] "GET /api/notes HTTP/1.1" 200 97 "http://localhost:8082/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36" "-"
+monitor-api-1      | 172.22.0.4 - - [12/Oct/2026 06:39:38] "[35m[1mPOST /api/notes HTTP/1.0[0m" 201 -
+monitor-api-1      | 172.22.0.4 - - [12/Oct/2026 06:39:38] "GET /api/auth/me HTTP/1.0" 200 -
+monitor-api-1      | 172.22.0.4 - - [12/Oct/2026 06:39:49] "GET /api/events HTTP/1.0" 200 -
+monitor-api-1      | 172.22.0.4 - - [12/Oct/2026 06:39:49] "GET /api/notes HTTP/1.0" 200 -
+monitor-db-1       | 2026-10-12 06:37:40.769 UTC [1] LOG:  starting PostgreSQL 16.15 (Debian 16.15-1.pgdg12+2) on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14+deb12u1) 12.2.0, 64-bit
+monitor-db-1       | 2026-10-12 06:37:40.770 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+monitor-db-1       | 2026-10-12 06:37:40.770 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+monitor-db-1       | 2026-10-12 06:37:40.777 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+monitor-db-1       | 2026-10-12 06:37:40.786 UTC [66] LOG:  database system was shut down at 2026-10-12 06:37:40 UTC
+monitor-db-1       | 2026-10-12 06:37:40.792 UTC [1] LOG:  database system is ready to accept connections
